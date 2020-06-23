@@ -1,2 +1,23 @@
 .l-header {
+  @include pc-layout($width: 1001px) {
+    background-color: #fff;
+    height: 80px;
+    nav > h1 {
+      font-family: Futura;
+      font-weight: normal;
+      letter-spacing: 2px;
+      font-size: 24px;
+      float: left;
+      margin-left: 20px;
+      line-height: 80px;
+    }
+    nav > ul {
+      float: right;
+      li {
+        display: inline-block;
+        margin-right: 30px;
+        line-height: 80px;
+      }
+    }
+  }
 }
