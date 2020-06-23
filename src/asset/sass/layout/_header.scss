@@ -1,8 +1,7 @@
 .l-header {
   @include pc-layout() {
     background-color: #fff;
-    nav > a > svg {
-      float: left;
+    nav > a > img {
       margin: 20px 20px;
       width:180px;
     }
