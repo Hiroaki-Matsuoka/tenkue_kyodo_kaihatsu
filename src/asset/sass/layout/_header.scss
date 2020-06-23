@@ -1,15 +1,10 @@
 .l-header {
-  @include pc-layout($width: 1001px) {
+  @include pc-layout() {
     background-color: #fff;
-    height: 80px;
-    nav > h1 {
-      font-family: Futura;
-      font-weight: normal;
-      letter-spacing: 2px;
-      font-size: 24px;
+    nav > a > svg {
       float: left;
-      margin-left: 20px;
-      line-height: 80px;
+      margin: 20px 20px;
+      width:180px;
     }
     nav > ul {
       float: right;
