@@ -1,2 +1,12 @@
-.p-room {
+.p-room{
+  p-room__content-wrapper{
+    width: 800px;
+    p-room__contents{
+      display: flex;
+ width: 100%;
+ justify-content: space-between;
+ margin: 0 auto;
+ align-items: center;
+    }
+  }
 }
