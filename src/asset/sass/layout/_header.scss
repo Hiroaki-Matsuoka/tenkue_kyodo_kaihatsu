@@ -1,12 +1,17 @@
 .l-header {
   @include pc-layout() {
     background-color: #fff;
-    nav > a > img {
-      margin: 20px 20px;
-      width:180px;
-    }
-    nav > ul {
-      float: right;
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      a {
+        height: 22px;
+        img {
+          margin-left: 20px;
+          width:180px;
+        }
+      }
       li {
         display: inline-block;
         margin-right: 30px;
