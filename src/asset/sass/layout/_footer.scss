@@ -1,2 +1,40 @@
 .l-footer {
+    ul {
+        list-style: none;
+    }
+    color: #fff;
+    a {
+        color: #fff;
+    }
+    @include pc-layout() {
+        background-color: #00478b;
+        .p-footer__container {
+            max-width: 1024px;
+            margin: 0 auto;
+            padding: 32px 0 24px 0;
+            img {
+                width: 168px;
+            }
+            .p-footer__flex {
+                display: flex;
+                .p-footer__info {
+                    margin-top: 8px;
+                }
+                .p-footer__menu {
+                    display: flex;
+                    margin: 0 0 0 auto;
+                    letter-spacing: 1px;
+                    li {
+                        margin-left: 32px;
+                    }
+                }
+            }
+            p {
+                text-align: center;
+                margin-top: 16px;
+            }
+        }
+    }
+    
 }
+
