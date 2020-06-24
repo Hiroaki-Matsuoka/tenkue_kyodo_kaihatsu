@@ -2,6 +2,7 @@
   @include pc-layout(){
     width: 850px;
     margin: 0 auto;
+    margin-bottom: 95px;
     h2{
       position: relative;
       @include font-size(20);
