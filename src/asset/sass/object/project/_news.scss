@@ -1,2 +1,42 @@
 .p-news {
+    ul {
+        list-style: none;
+    }
+    br {
+        display: none;
+        @include tab-layout() {
+            display: block;
+        }
+    }
+    @include pc-layout() {
+        .p-news__container {
+            margin: 0 auto;
+            max-width: 800px;
+            letter-spacing: 1px;
+            h2 {
+                text-align: center;
+                position: relative;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    border-bottom: 2px solid #2b669f;
+                    width: 40px;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    margin: auto;
+                }
+            }
+            ul {
+                li {
+                    border-bottom: 1px solid #2b669f;
+                    padding: 16px 12px;
+                    span {
+                        color: #2b669f;
+                        margin: 0 16px;
+                    }
+                }
+            }
+        }
+    }
 }
