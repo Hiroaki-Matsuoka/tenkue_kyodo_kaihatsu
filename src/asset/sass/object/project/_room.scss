@@ -4,7 +4,7 @@
     margin: 0 auto;
     h2{
       position: relative;
-      font-size: 20px;
+      @include font-size(20);
       text-align: center;
       margin-bottom: 55px;
       letter-spacing: 3px;
@@ -39,7 +39,7 @@
       width: 46%;
     }
     .p-room__text p{
-      font-size: 13px;
+      @include font-size(13);
     }
     .p-room__number{
       letter-spacing: 3px;
@@ -47,21 +47,21 @@
       font-weight: 550;
     }
     .p-room__grade{
-      font-size: 20px;
+      @include font-size(20);
       margin-bottom: 15px;
       font-weight: 550;
     }
-    .p-room__MORE{
+    .p-room__mainVisual{
       color: #00478b;
       border: 1px solid #00478b;
       text-align: center;
       width: 24%;
-      font-size: 15px;
+      @include font-size(15);
       letter-spacing: 2px;
       position: absolute;
 	    bottom: -15px;
     }
-    .p-room__MORE:after{
+    .p-room__mainVisual:after{
       content: '';
       position: absolute;
       left: 50%;
