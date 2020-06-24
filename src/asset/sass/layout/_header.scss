@@ -1,11 +1,9 @@
 body {
   overflow-x: hidden;
 }
-
-// ヘッダーメニューのCSS
+  // ヘッダーメニューのCSS
 .l-header {
-
-// 共通部分
+  // 共通部分
   background-color: #fff;
   nav {
     display: flex;
@@ -24,37 +22,35 @@ body {
       line-height: 80px;
     }
   }
-
-// PCレイアウト
+  // PCレイアウト
   @include pc-layout() {
-
-    #humburger {
+    #p-header__humburger {
       display:none;
     }
-
-    #modal_menu {
+    #p-header__modal_menu {
+      display: none;
+    }
+    #p-header__for_click {
       display: none;
     }
   }
-
-// SPレイアウト
+  // SPレイアウト
   @include sp-layout() {
-    background-color: #fff;
+    height: 110px;
     nav {
       height: 80px;
       a {
         height: 30px;
+        img {
+          margin-top: 12px;
+          width: 240px;
+        }
       }
       li {
         display: none;
       }
     }
-
-    #humburger {
-      margin-right: 30px;
-    }
-
-    #modal_menu {
+    #p-header__modal_menu {
       background: #222;
       position:relative;
       position: absolute;
@@ -77,13 +73,13 @@ body {
         }
       }
     }
-
-    #modal_menu.open {
+    #p-header__modal_menu.open {
       transform: translateX(-500px);
+      position: fixed;
     }
-
-    #close_modal {
+    #p-header__close_modal {
       p {
+        cursor: pointer;
         display: inline;
         position: absolute;
         top: 0;
@@ -91,6 +87,42 @@ body {
         color: #fff;
         font-size: 56px;
       }
+    }
+    // ハンバーガーメニュー
+    #p-header__for_click {
+      cursor: pointer;
+      padding-left:10px ;
+      margin-top: 15px;
+      margin-right: 20px;
+      height: 50px;
+      width: 50px;
+    }
+    .p-header__hum_icon {
+      position: relative;
+      width: 28px;
+      height: 3px;
+      color: #00478b;
+      background: currentColor;
+      margin-top: 25px;
+      margin-right: 30px;
+      transform: scale(-1, 1);
+    }
+    .p-header__hum_icon:before {
+      content: "";
+      position: absolute;
+      top: -11px;
+      width:  125%;
+      height: 100%;
+      background: currentColor;
+
+    }
+    .p-header__hum_icon:after {
+      content: "";
+      position: absolute;
+      top: 11px;
+      width:  75%;
+      height: 100%;
+      background: currentColor;
     }
   }
 }
