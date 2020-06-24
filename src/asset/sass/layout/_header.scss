@@ -1,21 +1,95 @@
+body {
+  overflow-x: hidden;
+}
+
+// ヘッダーメニューのCSS
 .l-header {
+
+// 共通部分
+  background-color: #fff;
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    a {
+      height: 22px;
+      img {
+        margin-left: 20px;
+        width:180px;
+      }
+    }
+    li {
+      display: inline-block;
+      margin-right: 30px;
+      line-height: 80px;
+    }
+  }
+
+// PCレイアウト
   @include pc-layout() {
+
+    #humburger {
+      display:none;
+    }
+
+    #modal_menu {
+      display: none;
+    }
+  }
+
+// SPレイアウト
+  @include sp-layout() {
     background-color: #fff;
     nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      height: 80px;
       a {
-        height: 22px;
-        img {
-          margin-left: 20px;
-          width:180px;
-        }
+        height: 30px;
       }
       li {
-        display: inline-block;
-        margin-right: 30px;
-        line-height: 80px;
+        display: none;
+      }
+    }
+
+    #humburger {
+      margin-right: 30px;
+    }
+
+    #modal_menu {
+      background: #222;
+      position:relative;
+      position: absolute;
+      top: 0;
+      right: -500px;
+      transform: translateX(500px);
+      width: 100%;
+      min-height: 100%;
+      z-index: 1;
+      transition: .4s;
+      ul {
+        margin-top: 200px;
+        li {
+          list-style: none;
+          text-align: center;
+          margin: 30px 0;
+          a {
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    #modal_menu.open {
+      transform: translateX(-500px);
+    }
+
+    #close_modal {
+      p {
+        display: inline;
+        position: absolute;
+        top: 0;
+        right: 30px;
+        color: #fff;
+        font-size: 56px;
       }
     }
   }

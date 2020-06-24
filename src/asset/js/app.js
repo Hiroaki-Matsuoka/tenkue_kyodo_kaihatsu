@@ -15,3 +15,15 @@
 //     initStaggerFadeAnim();
 //     initSmoothScroll();
 // });
+
+const humburger = document.getElementById('humburger');
+const modalMenu = document.getElementById('modal_menu');
+const closeModal = document.getElementById('close_modal');
+
+humburger.addEventListener('click', function() {
+  modalMenu.classList.toggle('open');
+});
+
+closeModal.addEventListener('click', function() {
+  modalMenu.classList.toggle('open');
+});
