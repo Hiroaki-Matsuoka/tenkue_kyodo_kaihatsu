@@ -51,7 +51,7 @@
       margin-bottom: 15px;
       font-weight: 550;
     }
-    .p-room__mainVisual{
+    .p-room__more{
       color: #00478b;
       border: 1px solid #00478b;
       text-align: center;
@@ -61,7 +61,7 @@
       position: absolute;
 	    bottom: -15px;
     }
-    .p-room__mainVisual:after{
+    .p-room__more:after{
       content: '';
       position: absolute;
       left: 50%;
