@@ -1,7 +1,7 @@
 .p-mainVisual {
   @include pc-layout() {
     img {
-      height: 450px;
+      height: 800px;
       width: 100%;
       object-fit: cover;
     }
