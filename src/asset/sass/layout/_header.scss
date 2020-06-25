@@ -5,6 +5,8 @@ body {
 .l-header {
   // 共通部分
   background-color: #fff;
+
+  // overflow-x: hidden;
   nav {
     display: flex;
     align-items: center;
@@ -55,7 +57,7 @@ body {
       position:relative;
       position: absolute;
       top: 0;
-      right: -500px;
+      right: -100px;
       transform: translateX(500px);
       width: 100%;
       min-height: 100%;
@@ -74,7 +76,7 @@ body {
       }
     }
     #p-header__modal_menu.open {
-      transform: translateX(-500px);
+      transform: translateX(-100px);
       position: fixed;
     }
     #p-header__close_modal {
