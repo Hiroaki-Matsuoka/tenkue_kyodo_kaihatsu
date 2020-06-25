@@ -1,2 +1,9 @@
 .p-mainVisual {
+  @include pc-layout() {
+    img {
+      height: 450px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
 }
