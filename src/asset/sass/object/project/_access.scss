@@ -1,2 +1,47 @@
 .p-access {
+  @include pc-layout(){
+    width: 950px;
+    margin: 80px auto;
+    iframe {
+      height: 300px;
+      width: 650px;
+    }
+    h2 {
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 55px;
+        font-weight: 545;
+        position: relative;
+    }
+    h2:before {
+        content: '';
+        border: 2px;
+        background-color: #222;
+        display: inline-block;
+        width: 35px;
+        height: 2px;
+        position: absolute;
+        left: 50%;
+        bottom: -6px;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+    .p-access__container {
+      display: flex;
+    }
+    .p-access__to_dest {
+      margin: 30px 0 0px 50px;
+      h4{
+        width: 250px;
+        letter-spacing: 2px;
+        font-size:18px;
+      }
+      p {
+        font-size: 16px;
+        margin-bottom: 15px;
+      }
+    }
+  }
 }
