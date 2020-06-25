@@ -94,8 +94,8 @@
 ===================================== */
 .p-room{
   @include sp-layout(){
-    width: 445px;
-    margin: 0 auto;
+    width: auto;
+    margin: 0 5%;
     margin-bottom: 95px;
     h2{
       position: relative;
@@ -153,7 +153,8 @@
         a{
           color: #00478b;
           border: 3px solid #00478b;
-          padding: 12px 125px;
+          padding: 4% 30%;
+          margin: auto;
           font-size: 4vw;
           font-weight: 500;
           letter-spacing: 2px;
@@ -163,8 +164,8 @@
       content: '';
       position: absolute;
       left: 50%;
-      bottom: 15px;
-      width: 100px;
+      bottom: 50%;
+      width: 25%;
       height: 3px;
       -moz-transform: translateX(100%);
       -webkit-transform: translateX(100%);
