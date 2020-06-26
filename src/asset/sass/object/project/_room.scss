@@ -181,11 +181,9 @@
 ===================================== */
 @include tab-layout(){
   .p-room{
-    width:850px;
+    width:auto;
     margin: 0 5%;
     margin-bottom: 95px;
-
-   
     h2{
       position: relative;
       @include font-size(20);
@@ -214,27 +212,26 @@
   .p-room__contents{
     margin: 0 auto;
     display: flex;
-    justify-content: center;
     width: 100%;
     position: relative;
     flex-flow: row-reverse;
+    justify-content: space-between;
     img{
       width: 47%;
     }
     .p-room__text{
       width: 50%;
+      margin-bottom: 5%;
       p{
         @include font-size(13);
       }
     }
     .p-room__number{
       letter-spacing: 3px;
-      margin-bottom: 10px;
       font-weight: 550;
     }
     .p-room__grade{
       @include font-size(20);
-      margin-bottom: 15px;
       font-weight: 550;
     }
     .p-room__more{
@@ -246,9 +243,11 @@
       letter-spacing: 2px;
       position: absolute;
       bottom: -15px;
+      margin-left: 23%;
       a{
         @include font-size(15);
         color: #00478b;
+        text-align: right;
       }
     }
     .p-room__more:after{
@@ -257,7 +256,7 @@
       left: 50%;
       bottom: 15px;
       display: inline-block;
-      width: 60px;
+      width: 30%;
       height: 1.5px;
       -moz-transform: translateX(100%);
       -webkit-transform: translateX(100%);
