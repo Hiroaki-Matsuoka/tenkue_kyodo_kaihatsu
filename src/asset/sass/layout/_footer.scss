@@ -6,8 +6,12 @@
     a {
         color: #fff;
     }
+    background-color: #00478b;
+
+/*-------------------------------------------------------
+PCレイアウト
+-------------------------------------------------------*/
     @include pc-layout() {
-        background-color: #00478b;
         .p-footer__container {
             max-width: 1024px;
             margin: 0 auto;
@@ -35,6 +39,35 @@
             }
         }
     }
-    
+
+/*-------------------------------------------------------
+SPレイアウト
+-------------------------------------------------------*/
+    @include sp-layout () {
+        .p-footer__container {
+            padding: 32px 5% 16px;
+            box-sizing: border-box;
+            max-width: 100%;
+            img {
+                width: 168px;
+                margin-bottom: 4px;
+            }
+            .p-footer__menu {
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 16px;
+                li {
+                    width: 50%;
+                }
+            }
+            p {
+                text-align: center;
+                margin-top: 14px;
+                @include font-size(28)
+            }
+        }
+
+    }    
+
 }
 
