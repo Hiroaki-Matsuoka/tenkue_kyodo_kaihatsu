@@ -1,125 +1,54 @@
 .p-news {
-    ul {
-        list-style: none;
-    }
-    br {
-        display: none;
-        @include tab-layout() {
-            display: block;
-        }
-    }
+    padding-top: 50px;
+    padding-bottom: 50px;
 
-/*-------------------------------------------------------
-PCレイアウト
--------------------------------------------------------*/
-    @include pc-layout() {
-        .p-news__container {
-            margin: 0 auto;
-            max-width: 800px;
-            letter-spacing: 1px;
-            h2 {
-                text-align: center;
-                position: relative;
-                margin-bottom: 60px;
-                @include font-size(24)
-                &::after {
-                    content: "";
-                    position: absolute;
-                    border-bottom: 2px solid #2b669f;
-                    width: 40px;
-                    bottom: -5px;
-                    right: 0;
-                    left: 0;
-                    margin: auto;
-                }
-            }
-            ul {
-                li {
-                    border-bottom: 1px solid #2b669f;
-                    padding: 16px 12px;
-                    span {
-                        color: #2b669f;
-                        margin: 0 16px;
-                    }
-                }
-            }
-        }
-    }
-
-/*-------------------------------------------------------
-SPレイアウト
--------------------------------------------------------*/
-    @include sp-layout () {
-        .p-news__container {
-            padding: 32px 5% 80px;
-            box-sizing: border-box;
-            max-width: 100%;
-            h2 {
-                text-align: center;
-                position: relative;
-                margin-bottom: 60px;
-                @include font-size(56)
-                letter-spacing: 2px;
-                &::after {
-                    content: "";
-                    position: absolute;
-                    border-bottom: 3px solid #2b669f;
-                    width: 48px;
-                    bottom: -5px;
-                    right: 0;
-                    left: 0;
-                    margin: auto;
-                }
-            }
-            ul {
-                li {
-                    border-bottom: 1px solid #2b669f;
-                    padding: 16px 12px;
-                    letter-spacing: 0.5px;
-                    span {
-                        color: #2b669f;
-                        margin: 0 16px;
-                        letter-spacing: 2px;
-                    }
-                }
-            }
-        }
-    }
-
-/*-------------------------------------------------------
-tabレイアウト
--------------------------------------------------------*/
     @include tab-layout() {
-        .p-news__container {
-            margin: 0 auto;
-            max-width: 90%;
-            letter-spacing: 1px;
-            h2 {
-                text-align: center;
-                position: relative;
-                margin-bottom: 40px;
-                @include font-size(24)
-                &::after {
-                    content: "";
-                    position: absolute;
-                    border-bottom: 2px solid #2b669f;
-                    width: 5vw;
-                    bottom: -5px;
-                    right: 0;
-                    left: 0;
-                    margin: auto;
-                }
-            }
-            ul {
-                li {
-                    border-bottom: 1px solid #2b669f;
-                    padding: 16px 12px;
-                    span {
-                        color: #2b669f;
-                        margin: 0 16px;
-                    }
-                }
-            }
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    @include sp-layout() {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    &__inner {
+        max-width: 800px;
+    }
+
+    &__container {
+        padding: 1em 1em;
+        border-bottom: 1px solid $color-secondary;
+        display: flex;
+
+        @include sp-layout() {
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+        display: flex;
+
+        @include sp-layout() {
+            width: 100%;
+        }
+    }
+
+    & time {
+        letter-spacing: 0.1em;
+    }
+
+    &__category {
+        margin-left: 1.5em;
+        color: $color-primary;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        margin-left: 1.5em;
+
+        @include sp-layout() {
+            margin-left: 0;
         }
     }
 }

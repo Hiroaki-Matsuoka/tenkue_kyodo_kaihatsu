@@ -1,103 +1,81 @@
 .l-footer {
-    ul {
+    color: $color-light;
+    background-color: $color-primary;
+
+    a {
+        color: $color-light;
+    }
+
+    li {
         list-style: none;
     }
-    color: #fff;
-    a {
-        color: #fff;
-    }
-    background-color: #00478b;
 
-/*-------------------------------------------------------
-PCレイアウト
--------------------------------------------------------*/
-    @include pc-layout() {
-        .p-footer__container {
-            max-width: 1024px;
-            margin: 0 auto;
-            padding: 32px 0 24px 0;
-            img {
-                width: 168px;
-            }
-            .p-footer__flex {
-                display: flex;
-                .p-footer__info {
-                    margin-top: 8px;
-                }
-                .p-footer__menu {
-                    display: flex;
-                    margin: 0 0 0 auto;
-                    letter-spacing: 1px;
-                    li {
-                        margin-left: 32px;
-                    }
-                }
-            }
-            p {
-                text-align: center;
-                margin-top: 16px;
+    &__inner {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    &__container {
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include sp-layout() {
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+        @include sp-layout() {
+            width: 100%;
+        }
+
+        &:nth-of-type(1) {
+            @include sp-layout() {
+                margin-bottom: 1rem;
             }
         }
     }
 
-/*-------------------------------------------------------
-SPレイアウト
--------------------------------------------------------*/
-    @include sp-layout () {
-        .p-footer__container {
-            padding: 32px 5% 16px;
-            box-sizing: border-box;
-            max-width: 100%;
-            img {
-                width: 168px;
-                margin-bottom: 4px;
-            }
-            .p-footer__menu {
-                display: flex;
-                flex-wrap: wrap;
-                margin-top: 16px;
-                li {
-                    width: 50%;
-                }
-            }
-            p {
-                text-align: center;
-                margin-top: 14px;
-                @include font-size(28)
-            }
-        }
-    }    
+    &__logo {
+        @include font-size(24);
 
-/*-------------------------------------------------------
-Tabレイアウト
--------------------------------------------------------*/
-    @include tab-layout () {
-        .p-footer__container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 32px 3% 24px;
-            img {
-                width: 168px;
-            }
-            .p-footer__flex {
-                display: flex;
-                .p-footer__info {
-                    margin-top: 8px;
-                }
-                .p-footer__menu {
-                    display: flex;
-                    margin: 0 0 0 auto;
-                    letter-spacing: 1px;
-                    li {
-                        margin-left: 3vw;
-                    }
-                }
-            }
-            p {
-                text-align: center;
-                margin-top: 16px;
+        img {
+            width: auto;
+            height: 20px;
+        }
+    }
+
+    &__nav {
+        display: flex;
+
+        @include sp-layout() {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__nav__item {
+        @include sp-layout() {
+            width: 50%;
+        }
+
+        &:not(:first-child) {
+            margin-left: 2em;
+
+            @include sp-layout() {
+                margin-left: 0;
             }
         }
+    }
+
+    &__nav__link {
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+
+    &__copyright {
+        display: block;
+        text-align: center;
     }
 }
-

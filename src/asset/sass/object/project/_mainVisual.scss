@@ -1,43 +1,7 @@
 .p-mainVisual {
-  @include pc-layout() {
-    img {
-      height: 800px;
-      width: 100%;
-      object-fit: cover;
-    }
-  }
-
-  @include tab-layout() {
-    .p-mainVisual__photo_wrap {
-      position: relative;
-      overflow: hidden;
-      width: 100%;
-      height: 850px;
-      img {
-        position: absolute;
-        top: 400px;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        height: 100%;
-        width: auto;
-      }
-    }
-  }
-  
-  @include sp-layout() {
-    .p-mainVisual__photo_wrap {
-      position: relative;
-      overflow: hidden;
-      width: 100%;
-      height: 900px;
-      img {
-        position: absolute;
-        top: 400px;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        height: 100%;
-        width: auto;
-      }
-    }
-  }
+    height: 90vh;
+    background-image: url(/asset/image/mv.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

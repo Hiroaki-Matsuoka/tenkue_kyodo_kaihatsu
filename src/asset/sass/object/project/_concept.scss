@@ -1,103 +1,35 @@
 .p-concept {
-    width: 100%;
-    margin:80px auto;
+    padding-top: 100px;
+    padding-bottom: 50px;
 
-    h2 {
-        font-size: 20px;
-        text-align: center;
-        margin-bottom: 55px;
-        font-weight: 550;
-        position: relative;
-
+    @include tab-layout() {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    @include sp-layout() {
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
 
-    h2:before {
-        content: ' ';
-        background-color: #00478b;
-        display: inline-block;
-        width: 35px;
-        height: 2px;
-        position: absolute;
-        left: 50%;
-        bottom: -6px;
-        -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        -moz-transform: translateX(-50%);
-        transform: translateX(-50%);
-    }
-
-    .concept__images {
-        width: 300px;
-        margin: 0 auto;
+    &__imageWrap {
+        max-width: 400px;
+        margin: 0 auto 50px;
         display: flex;
-        justify-content: space-between;
-        margin-bottom: 55px;
+        justify-content: space-around;
+
+        @include tab-layout() {
+            margin-bottom: 40px;
+        }
+        @include sp-layout() {
+            margin-bottom: 30px;
+        }
     }
 
-    .concept__icon {
-        width: 70px;
-        height: 70px;
+    &__image {
+        width: 20%;
+    }
+
+    &__text {
         text-align: center;
-    }
-
-    p {
-        font-size: 13px;
-        text-align: center;
-    }
-
-    @media(max-width:480px) {
-        margin-top:30px;
-        margin-bottom:100px;
-
-        h2{
-            font-size: 6vw;
-            margin-bottom:40px;
-        }
-
-        h2:before{
-            bottom:-3px;
-            width:50px;
-            height:3px;
-        }
-
-        .concept__images{
-            width:70%;
-            margin-bottom:35px;
-        }
-
-        .concept__icon{
-            height: 60px;
-            width:60px;
-        }
-
-        .concept__comment{
-            width:90%;
-            margin:0 auto;
-
-            p{
-                font-size:4vw;
-            }
-        }
-    }
-
-    @media(max-width: 960px){
-        h2{
-            font-size:30px;
-        }
-
-        h2:before{
-            width:40px;
-        }
-        
-        .concept__comment{
-            width:90%;
-            margin:0 auto;
-            
-            p{
-                font-size:15px;
-            }
-        }
     }
 }
-
-
