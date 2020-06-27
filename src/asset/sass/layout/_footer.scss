@@ -66,8 +66,38 @@ SPレイアウト
                 @include font-size(28)
             }
         }
-
     }    
 
+/*-------------------------------------------------------
+Tabレイアウト
+-------------------------------------------------------*/
+    @include tab-layout () {
+        .p-footer__container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 32px 3% 24px;
+            img {
+                width: 168px;
+            }
+            .p-footer__flex {
+                display: flex;
+                .p-footer__info {
+                    margin-top: 8px;
+                }
+                .p-footer__menu {
+                    display: flex;
+                    margin: 0 0 0 auto;
+                    letter-spacing: 1px;
+                    li {
+                        margin-left: 3vw;
+                    }
+                }
+            }
+            p {
+                text-align: center;
+                margin-top: 16px;
+            }
+        }
+    }
 }
 
